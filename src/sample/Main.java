@@ -10,19 +10,9 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
-
-import java.awt.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.PrintWriter;
-
 
 public class Main extends Application {
 
@@ -135,7 +125,21 @@ public class Main extends Application {
                 list.getItems().get(selectedIdx).setLastName(oldPrice);
                 list.getItems().get(selectedIdx).setEmail(newPrice);
                 list.refresh();
-        }
+            }
+        });
+
+        // Save function
+        report.setOnAction(actionEvent ->  {
+            int selectedIdx = list.getSelectionModel().getSelectedIndex();
+            if(selectedIdx != -1) {
+                // Get values
+                String name = productField.getText();
+                String quantity = quantityField.getText();
+                String oldPrice = oldPriceField.getText();
+                String newPrice = newPriceField.getText();
+                // Save values
+                runQuery("UPDATE teachers SET name = '" + quantity + "', surename = '" + oldPrice + "', email = '" + newPrice + "' WHERE idTeachers= " + name);
+            }
         });
 
 
@@ -152,7 +156,7 @@ public class Main extends Application {
 
     public static ResultSet runQuery(String query) {
         try {
-            // db parameters
+            // database parameters
             String url = "jdbc:mysql://localhost:3306/cr6_tamas_piski_schooldatabase";
             String user = "root";
             String password = "root";
@@ -163,8 +167,9 @@ public class Main extends Application {
             // create statement
             stmt = con.createStatement();
 
-            // creating result object
-            rs = stmt.executeQuery(query);
+            // creating result object or updating
+            if (query.contains("UPDATE")) stmt.executeUpdate(query);
+            else rs = stmt.executeQuery(query);
             return rs;
 
         } catch (SQLException e) {
