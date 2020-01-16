@@ -47,7 +47,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-        rs = runQuery("SELECT * FROM teachers");
+        DatabaseConnectable db = new jdbc();
+
+
+        rs = db.runQuery("SELECT * FROM teachers");
 
         // looping trough and creating teachers
         while (rs.next()) {
@@ -55,7 +58,7 @@ public class Main extends Application {
             String first_name = rs.getString(2);
             String last_name = rs.getString(3);
             String email = rs.getString(4);
-            teachers.add(new Teacher(id, first_name, last_name, email));
+            teachers.add(new Teacher(id, first_name, last_name, email, db));
         }
 
 
@@ -98,7 +101,7 @@ public class Main extends Application {
             quantityField.setText(newValue.lastName);
             oldPriceField.setText(newValue.firstName);
             newPriceField.setText(newValue.email);
-            ResultSet rs = runQuery("SELECT class_name FROM classes JOIN teachers ON id_teacher = idTeachers WHERE id_teacher = " + String.valueOf(newValue.id));
+            ResultSet rs = db.runQuery("SELECT class_name FROM classes JOIN teachers ON id_teacher = idTeachers WHERE id_teacher = " + String.valueOf(newValue.id));
             String classesToShow = "";
             try {
                    while (rs.next()) {
@@ -138,11 +141,9 @@ public class Main extends Application {
                 String oldPrice = oldPriceField.getText();
                 String newPrice = newPriceField.getText();
                 // Save values
-                runQuery("UPDATE teachers SET name = '" + quantity + "', surename = '" + oldPrice + "', email = '" + newPrice + "' WHERE idTeachers= " + name);
+                db.runQuery("UPDATE teachers SET name = '" + quantity + "', surename = '" + oldPrice + "', email = '" + newPrice + "' WHERE idTeachers= " + name);
             }
         });
-
-
 
         // Creating the scene
         Scene scene = new Scene(main, 890, 550);
@@ -154,28 +155,5 @@ public class Main extends Application {
         launch(args);
     }
 
-    public static ResultSet runQuery(String query) {
-        try {
-            // database parameters
-            String url = "jdbc:mysql://localhost:3306/cr6_tamas_piski_schooldatabase";
-            String user = "root";
-            String password = "root";
 
-            // create a connection to the database
-            con = DriverManager.getConnection(url, user, password);
-
-            // create statement
-            stmt = con.createStatement();
-
-            // creating result object or updating
-            if (query.contains("UPDATE")) stmt.executeUpdate(query);
-            else rs = stmt.executeQuery(query);
-            return rs;
-
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-
-        }
-        return rs;
-        };
 }

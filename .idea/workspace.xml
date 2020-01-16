@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/lib.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CR6/sample/Controller.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CR6/sample/Controller.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CR6/sample/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CR6/sample/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CR6/sample/Teacher.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CR6/sample/Teacher.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sample/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sample/Teacher.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/sample/Teacher.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +64,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -89,10 +95,11 @@
     <property name="MemberChooser.showClasses" value="true" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="OverrideImplement.combined" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dynamic.classpath" value="false" />
     <property name="ignore_missing_gitignore" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysql-connector-java-8.0.18/mysql-connector-java-8.0.18.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mysql-connector-java-5.1.48/mysql-connector-java-5.1.48.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -127,7 +134,7 @@
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="sample.Main" />
       <module name="CR6" />
-      <option name="VM_PARAMETERS" value="--module-path C:\Users\Desktop\javafx-sdk-11.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
+      <option name="VM_PARAMETERS" value="--module-path C:\Users\student\Desktop\javafx-sdk-11.0.2\lib --add-modules=javafx.controls,javafx.fxml" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="sample.*" />
@@ -212,45 +219,71 @@
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="734" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578753516408">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="274" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578911873798">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="274" y="37" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1578911873798" />
     <state x="734" y="174" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1578753516408" />
+    <state x="600" y="87" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1578911734252">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="600" y="87" key="#com.intellij.ide.macro.MacrosDialog/0.0.1366.728@0.0.1366.728" timestamp="1578911734252" />
     <state x="1085" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1578756000724">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="1085" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.2560.1040@0.0.2560.1040" timestamp="1578756000724" />
+    <state x="531" y="252" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1578907055224">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="531" y="252" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1366.728@0.0.1366.728" timestamp="1578907055224" />
     <state x="984" y="202" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog" timestamp="1578757284076">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="984" y="202" key="#com.intellij.refactoring.encapsulateFields.EncalpsulateFieldsDialog/0.0.2560.1040@0.0.2560.1040" timestamp="1578757284076" />
-    <state x="986" y="260" key="FileChooserDialogImpl" timestamp="1578753564595">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="526" y="182" key="FileChooserDialogImpl" timestamp="1578912108026">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="526" y="182" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1578912108026" />
     <state x="986" y="260" key="FileChooserDialogImpl/0.0.2560.1040@0.0.2560.1040" timestamp="1578753564595" />
-    <state width="2517" height="281" key="GridCell.Tab.0.bottom" timestamp="1578765577150">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom" timestamp="1578926709393">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1578926709393" />
     <state width="2517" height="281" key="GridCell.Tab.0.bottom/0.0.2560.1040@0.0.2560.1040" timestamp="1578765577150" />
-    <state width="2517" height="281" key="GridCell.Tab.0.center" timestamp="1578765577150">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.center" timestamp="1578926709392">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1578926709392" />
     <state width="2517" height="281" key="GridCell.Tab.0.center/0.0.2560.1040@0.0.2560.1040" timestamp="1578765577150" />
-    <state width="2517" height="281" key="GridCell.Tab.0.left" timestamp="1578765577149">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.left" timestamp="1578926709391">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1578926709391" />
     <state width="2517" height="281" key="GridCell.Tab.0.left/0.0.2560.1040@0.0.2560.1040" timestamp="1578765577149" />
-    <state width="2517" height="281" key="GridCell.Tab.0.right" timestamp="1578765577150">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state width="1323" height="179" key="GridCell.Tab.0.right" timestamp="1578926709392">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state width="1323" height="179" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1578926709392" />
     <state width="2517" height="281" key="GridCell.Tab.0.right/0.0.2560.1040@0.0.2560.1040" timestamp="1578765577150" />
-    <state x="760" y="93" key="SettingsEditor" timestamp="1578753570460">
-      <screen x="0" y="0" width="2560" height="1040" />
+    <state x="326" y="0" key="SettingsEditor" timestamp="1578912112102">
+      <screen x="0" y="0" width="1366" height="728" />
     </state>
+    <state x="326" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1578912112102" />
     <state x="760" y="93" key="SettingsEditor/0.0.2560.1040@0.0.2560.1040" timestamp="1578753570460" />
     <state x="662" y="221" key="new project wizard" timestamp="1578753684040">
       <screen x="0" y="0" width="2560" height="1040" />
     </state>
     <state x="662" y="221" key="new project wizard/0.0.2560.1040@0.0.2560.1040" timestamp="1578753684040" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/sample/Main.java</url>
+          <line>136</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

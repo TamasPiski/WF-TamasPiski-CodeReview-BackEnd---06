@@ -6,17 +6,23 @@ public class Teacher {
     public String lastName;
     public String firstName;
     public String email;
+    public DatabaseConnectable db;
 
-    public Teacher(int id, String lastName, String firstName, String email) {
+    public Teacher(int id, String lastName, String firstName, String email, DatabaseConnectable db) {
         this.setId(id);
         this.setLastName(lastName);
         this.setFirstName(firstName);
         this.setEmail(email);
+        this.db = db;
+    }
+
+    public void lofasz() {
+        db.runQuery("");
     }
 
     @Override
     public String toString(){
-        return this.firstName + " " + this.lastName;
+        return this.lastName + " " + this.firstName;
     }
 
     public void setId(int id) {
